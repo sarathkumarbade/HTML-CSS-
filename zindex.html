@@ -1,0 +1,71 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.banner {
+  position: relative;   /* reference point */
+  width: 800px;
+  border: 1px solid red;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+
+  
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  /* color: white;
+  z-index: 2;           text above image */
+  text-align: center;
+  z-index: 2;
+  border: 1px solid red;
+  /* transform: translate(50%,-50%); */
+  /* top: 50%;
+left: 50%; */
+transform: translate(-40%,-40%);
+
+}
+
+/* optional overlay for better readability
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+} */
+
+
+
+
+</style>
+<body>
+
+<div class="banner">
+  <img src="https://picsum.photos/800/400" alt="banner image">
+  <div class="text">
+    <h1>Welcome to My Website</h1>
+    <p>Learn Web Development</p>
+  </div>
+</div>
+    
+</body>
+</html>
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bento Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+    body {
+  margin: 0;
+  background: #8fa8ff;
+  font-family: Arial, sans-serif;
+}
+
+.bento {
+  width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+  background: black;
+  border-radius: 24px;
+
+  display: grid;
+  gap: 16px;
+
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 180px);
+
+  grid-template-areas:
+    "burger phone1 phone1 phone2 menu menu"
+    "burger analytics analytics analytics menu menu"
+    "profile analytics analytics analytics status status"
+    "profile rating rating map map map";
+}
+
+/* Base card style */
+.card {
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Individual areas */
+.burger    { grid-area: burger;    background: #ff7a00; }
+.phone1    { grid-area: phone1;    background: #a7c8ff; color: black; }
+.phone2    { grid-area: phone2;    background: #a7c8ff; color: black; }
+.menu      { grid-area: menu;      background: #ff7a00; }
+
+.profile   { grid-area: profile;   background: #a7c8ff; color: black; }
+.analytics { grid-area: analytics; background: #ff7a00; }
+.status    { grid-area: status;    background: #bcd6ff; color: black; }
+
+.rating    { grid-area: rating;    background: #ff9f50; }
+.map       { grid-area: map;       background: #d9d9d9; color: black; }
+
+</style>
+<body>
+
+<div class="bento">
+
+  <div class="card burger">Burger</div>
+  <div class="card phone1">App</div>
+  <div class="card phone2">Orders</div>
+  <div class="card menu">Menu</div>
+
+  <div class="card profile">User</div>
+  <div class="card analytics">Analytics</div>
+  <div class="card status">Status</div>
+
+  <div class="card rating">Rating</div>
+  <div class="card map">Map</div>
+
+</div>
+
+</body>
+</html>
